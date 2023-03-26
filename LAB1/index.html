@@ -18,6 +18,9 @@
 				width:100%;
 				padding:1em
 			}
+			th, td {
+				border:1px solid #888888;
+			}
 			section {
 				padding:1em
 			}
@@ -51,8 +54,8 @@
 		</header>
 	
 		<div id="summery-content">
-			<table border = "1">
-				<caption>간략한 소개 입니다</caption>
+			<table>
+				<caption>간략한 소개</caption>
 				<thead>
 					<tr>
 						<th colspan="4">
@@ -92,17 +95,15 @@
 		
 		<div id="main-content">
 			<section id="list" style="background-color: aliceblue;">
-				<p><strong>자기소개서 목차</strong></p>
-				<p>
-					<ol>
-						<li><a href="#basic">인사말</a></li>
-						<li><a href="#likes">좋아하는 것들</a></li>
-						<li><a href="#hobby">나의 취미</a></li>
-						<li><a href="#vision">장래 희망</a></li>
-						<li><a href="#pet">반려동물 소개</a></li>
-						<li><a href="#end">마치며</a></li>
-					</ol>
-				</p>
+				<h3>자기소개서 목차</h3>
+				<ol>
+					<li><a href="#basic">인사말</a></li>
+					<li><a href="#likes">좋아하는 것들</a></li>
+					<li><a href="#hobby">나의 취미</a></li>
+					<li><a href="#vision">장래 희망</a></li>
+					<li><a href="#pet">반려동물 소개</a></li>
+					<li><a href="#end">마치며</a></li>
+				</ol>
 			</section>
 			<section id="basic">
 				<h2>인사말</h2>
@@ -117,68 +118,54 @@
 			</section>
 			<section id="likes">
 				<h2>좋아하는 것들</h2>
-				<p>
-					<ul>
-						<li>
-							<p><strong>전자기기들</strong></p>
-							<p>
-								<div class="in-line">
-									컴퓨터, 스마트폰, 태블릿, 모니터 등등 IT기기들을 포함하여 전기로 작동하는 거의 모든것들을 좋아합니다.<br>
-									그래서 제 지출의 대부분들이 다양한 전자기기들을 모으는데 사용되고 있습니다.<br>
-									컴퓨터관련 학과를 선택한 것도 이러한 이유에서인 것 같습니다.<br>
-								</div>
-							</p>
-						</li>
-						<li>
-							<p><strong><a href="http://youtube.com">유튜브</a></strong></p>
-							<p>
-								<div class="in-line">
-									버스타고 학교 갈 때 등 시간이 남을 때 주로 유튜브를 시청합니다. 거의 하루에 한시간 정도는 유튜브를 보는 것 같습니다.<br>
-									주로 전자기기, 자동차 관련 영상들을 많이 시청하고, 학교에서 배운 내용이 이해가 안될 때 유튜브에서 많이 도움을 얻습니다.<br>
-								</div>
-							</p>
-						</li>
-						<li>
-							<p><strong>해리포터 시리즈</strong></p>
-							<p>
-								<div class="in-line">
-									사실 영화는 별로 좋아하지 않는데, OTT서비스에서 해리포터 시리즈 만큼은 굉장히 재미있게 봤습니다.<br>
-									나중에 시간이 되면 해리포터 책도 읽어보려합니다.<br>
-								</div>
-							</p>
-						</li>
-					</ul>
-				</p>
+				<ul>
+					<li>
+						<p><strong>전자기기들</strong></p>
+						<div class="in-line">
+							컴퓨터, 스마트폰, 태블릿, 모니터 등등 IT기기들을 포함하여 전기로 작동하는 거의 모든것들을 좋아합니다.<br>
+							그래서 제 지출의 대부분들이 다양한 전자기기들을 모으는데 사용되고 있습니다.<br>
+							컴퓨터관련 학과를 선택한 것도 이러한 이유에서인 것 같습니다.<br>
+						</div>
+					</li>
+					<li>
+						<p><strong><a href="http://youtube.com">유튜브</a></strong></p>
+						<div class="in-line">
+							버스타고 학교 갈 때 등 시간이 남을 때 주로 유튜브를 시청합니다. 거의 하루에 한시간 정도는 유튜브를 보는 것 같습니다.<br>
+							주로 전자기기, 자동차 관련 영상들을 많이 시청하고, 학교에서 배운 내용이 이해가 안될 때 유튜브에서 많이 도움을 얻습니다.<br>
+						</div>
+					</li>
+					<li>
+						<p><strong>해리포터 시리즈</strong></p>
+						<div class="in-line">
+							사실 영화는 별로 좋아하지 않는데, OTT서비스에서 해리포터 시리즈 만큼은 굉장히 재미있게 봤습니다.<br>
+							나중에 시간이 되면 해리포터 책도 읽어보려합니다.<br>
+						</div>
+					</li>
+				</ul>
 			</section>
 			<section id="hobby">
 				<h2>나의 취미</h2>	
-				<p>
-					<ul>
-						<li>
-							<p><strong><a href="https://www.acmicpc.net">백준 온라인 저지</a></strong></p>
-							<p>
-								<div class="in-line">
-									백준 온라인 저지는 프로그래밍 문제를 여러 알고리즘들을 사용하여 해결하고 채점받을 수 있는 사이트 입니다.<br>
-									처음에는 알고리즘을 공부하기 위해 시작했는데, 재미를 느끼고 제 취미가 되었습니다.<br>
-									이 사이트는 푼 문제에 따라 브론즈-실버-골드-플래티넘-다이아-루비 순으로 레벨을 부여해줍니다.<br>
-									저는 지금 플레티넘5인데, 매일 한문제 이상을 풀어 이번 년도 안에 플레티넘의 상위 레벨까지 달성하는 것이 목표입니다.<br>
-								</div>
-							</p>
-						</li>
-						<li>
-							<p><strong>드론 조립</strong></p>
-							<p>
-								<div class="in-line">
-									고등학교떄 제 꿈이 드론개발자였던 만큼, 드론에 관심이 많았습니다.<br>
-									지금은 조립한 드론에 소형 컴퓨터와 "Jetson nano"라는 소형 컴퓨터를 장착하여 비행 중 특정 물체를 인식하도록 만들기 위해 노력하고 있습니다.<br>
-									지금 제가 인공지능 중에서도 컴퓨터 비전 분야의 인공지능에 관심이 많은 이유도 이 때문인 것 같습니다.
-								</div>
-							</p>
-						</li>
-					</ul>
-				</p>
+				<ul>
+					<li>
+						<p><strong><a href="https://www.acmicpc.net">백준 온라인 저지</a></strong></p>
+						<div class="in-line">
+							백준 온라인 저지는 프로그래밍 문제를 여러 알고리즘들을 사용하여 해결하고 채점받을 수 있는 사이트 입니다.<br>
+							처음에는 알고리즘을 공부하기 위해 시작했는데, 재미를 느끼고 제 취미가 되었습니다.<br>
+							이 사이트는 푼 문제에 따라 브론즈-실버-골드-플래티넘-다이아-루비 순으로 레벨을 부여해줍니다.<br>
+							저는 지금 플레티넘5인데, 매일 한문제 이상을 풀어 이번 년도 안에 플레티넘의 상위 레벨까지 달성하는 것이 목표입니다.<br>
+						</div>
+					</li>
+					<li>
+						<p><strong>드론 조립</strong></p>
+						<div class="in-line">
+							고등학교떄 제 꿈이 드론개발자였던 만큼, 드론에 관심이 많았습니다.<br>
+							지금은 조립한 드론에 소형 컴퓨터와 "Jetson nano"라는 소형 컴퓨터를 장착하여 비행 중 특정 물체를 인식하도록 만들기 위해 노력하고 있습니다.<br>
+							지금 제가 인공지능 중에서도 컴퓨터 비전 분야의 인공지능에 관심이 많은 이유도 이 때문인 것 같습니다.
+						</div>
+					</li>
+				</ul>
 				<div class="in-page">
-					<img src="drone.jpg" alt="Drone" style="width:30%;"> 
+					<img src="drone.jpg" alt="Drone" style="width:30%; height:auto;"> 
 				</div>
 			</section>
 			<section id="vision">
@@ -212,16 +199,10 @@
 					</p>
 				</div>
 			</section>
-			<section>
-				<p>
-					<a href="#head">처음으로 가기</a>
-				</p>
-			</section>
+			<footer>
+				<a href="#head">처음으로 가기</a>
+			</footer>
 		</div>	
 	</body>
-	
-	<footer>
-		2022149029 최희찬
-	</footer>
 </html>
 
