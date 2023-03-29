@@ -14,56 +14,55 @@
             <div class="navItem"><a href="login.html" class="navLink">Login</a></div>
             <div class="navItem">Sign Up</div>
         </div>
-        <div id="formDiv">
-            <form method="POST" action = "login.html">
+        <div class="signFormDiv">
+            <form method="POST" action = "login.html" class="signForm">
                 <p>
-                    <label>이름: <input class="textInput" name = "id" type = "text" autofocus required autocomplete/></label>
-                    <label class="notice">* 필수</label>
+                    <label><strong>Your name</strong> <br><input class="textInput" name = "id" type = "text" autofocus required autocomplete/><br></label>
+                    <label class="notice">* required</label>
                 </p>
                 <p>
-                    <label>성별
-                        &nbsp;남:&nbsp;<input name = "sex" type = "radio" value = "male" required checked>
-                        &nbsp;여:&nbsp;<input name = "sex" type = "radio" value = "female" required>
-                        &nbsp;비공개:&nbsp;<input name = "sex" type = "radio" value="notresponse" required>
+                    <label><strong>Gender</strong>
+                        &nbsp;Male&nbsp;<input name = "gender" type = "radio" value = "male" checked>
+                        &nbsp;Female&nbsp;<input name = "gender" type = "radio" value = "female" >
+                        &nbsp;No Response&nbsp;<input name = "gender" type = "radio" value="notresponse" >
+                    </label>
+                    <label class="notice">* required</label>
+                </p>
+                <p>
+                    <label><strong>Birth</strong>&nbsp; <input name="birthday" type="date"/></label>
+                </p>
+                <p>
+                    <label><strong>Email Address</strong> <br><input class="textInput"name="email" type="email" placeholder = "email@example.com" autocomplete/></label>
+                </p>
+                <p>
+                    <label><strong>Tel</strong> <br><input class="textInput"name="tel" type="tel" placeholder = "###-####-####" pattern = "\d{3}\-\d{4}\-\d{4}" /></label>
+                </p>
+                <p>
+                    <label><strong>ID</strong> <br><input class="textInput"name="id" type="text" maxlength = "20" size = "20"required autocomplete/><br></label>
+                    <label class="notice">* requred, less then 20 characters</label>
+                </p>
+                <p>
+                    <label><strong>Password </strong><br><input class="textInput"name="passwd" type="password" required/><br> </label>
+                    <label class="notice">* required</label>
+                </p>
+                <p>
+                    <label><strong>Password Check</strong> <br><input class="textInput"name="chkpasswd" type="password" placeholder="Enter your password again"required/><br></label>
+                    <label class="notice">* required</label>
+                </p>
+                <p>
+                    <label><strong>Your Interests</strong><br>
+                        IT Devices&nbsp; <input name = "liked" type = "checkbox" value = "it"> &nbsp;Clothes&nbsp; <input name = "liked" type = "checkbox" value = "clothes">
+                        &nbsp;Foods&nbsp; <input name = "liked" type = "checkbox" value = "food">
                     </label>
                 </p>
                 <p>
-                    <label>생년월일: <input name="birthday" type="date" /></label>
-                </p>
-                <p>
-                    <label>이메일 주소: <input class="textInput"name="email" type="email" placeholder = "email@example.com" autocomplete/></label>
-                </p>
-                <p>
-                    <label>전화번호: <input class="textInput"name="tel" type="tel" placeholder = "###-####-####" pattern = "\d{3}\-\d{4}\-\d{4}" /></label>
-                    <label>###-####-####</label>
-                </p>
-                <p>
-                    <label>아이디: <input class="textInput"name="id" type="text" maxlength = "20" size = "20"required autocomplete/></label>
-                    <label class="notice">* 필수, 20자 이내</label>
-                </p>
-                <p>
-                    <label>비밀번호: <input class="textInput"name="passwd" type="password" required/> </label>
-                    <label class="notice">* 필수</label>
-                </p>
-                <p>
-                    <label>비밀번호 확인: <input class="textInput"name="chkpasswd" type="password" required/></label>
-                    <label class="notice">* 필수</label>
-                </p>
-                <p>
-                    <label>관심품목:
-                        &nbsp;IT/가전&nbsp; <input name = "liked" type = "checkbox" value = "it">
-                        &nbsp;의류&nbsp; <input name = "liked" type = "checkbox" value = "clothes">
-                        &nbsp;식품&nbsp; <input name = "liked" type = "checkbox" value = "food">
-                    </label>
-                </p>
-                <p>
-                    <input type = "submit" value="회원가입"/>
-                    <input type = "submit" formnovalidate value="취소" />
+                    <input id="signupBtn" class="btn" type = "submit" value="Sign Up"/>
+                    <input id="cancelBtn" class="btn" type = "submit" formnovalidate value="Cancel" />
                 </p>
             </form>
         </div>
         <footer>
-            CSI-2109, Spring 2023
+            <h6>CSI2109-01, 2023 Spring<br>2022149029 최희찬</h6>
         </footer>
     </body>
 </html>

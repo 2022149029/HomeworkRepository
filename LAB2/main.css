@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: darkgray;
 }
 .header {
     height:25%;
@@ -53,21 +54,63 @@ body {
     color: red;
 }
 
-#formDiv {
+.signFormDiv {
     width:100%;
     display:flex;
     margin: 1em 0;
     justify-content: center; 
 }
 
-input .textInput {
-    border-radius:5px;
+.signForm {
+    padding:2em;
+    width:400px;
+    border-radius:10px;
+    background-color: #CCCCCC;
+}
+
+
+
+.textInput {
+    border-radius:50px;
     border-color:black;
-    border-width: 1px;
-    width:"10px";
+    border-width: 2px;
+    width: 100%;
+    height:30px;
+}
+
+.textInput:focus{
+    border-color:orange;
+    border-width: 5px;
 }
  
+label strong {
+    font-family: 'prompt', sans-serif;
+}
 
+.btn {
+    border-radius:50px;
+    border-width: 2px;
+    height:30px;
+    width:20%;
+}
+
+#signupBtn {
+    border-color:green;
+    color:#008800;
+    float:left;
+}
+ 
+#loginBtn {
+    border-color:green;
+    color:#008800;
+    float:left;
+}
+
+#cancelBtn {
+    border-color:red;
+    color:#CC0000;
+    float:right;
+}
 
 @media (max-width:800px) {
     .nav {
@@ -76,5 +119,12 @@ input .textInput {
     .navItem {
         width:100%;
         padding: 5px 0;
+        transition-property: none;
+    }
+    .navItem:hover{
+        width:100%;
+    }
+    #signupForm{
+        width:100%;
     }
 }

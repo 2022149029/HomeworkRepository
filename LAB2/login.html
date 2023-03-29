@@ -14,21 +14,23 @@
             <div class="navItem"><a href="login.html" class="navLink">Login</a></div>
             <div class="navItem"><a href="signup.html" class="navLink">Sign Up</a></div>
         </div>
-        <div class="loginFormDiv">
-            <form method="POST" action = "login.html">
+        <div class="signFormDiv">
+            <form method="POST" action = "login.html" class="signForm">
                 <p>
-                    <label>ID:
-                        <input name = "id" type = "text" autofocus size="10" maxlength="20" required>
+                    <label><strong>ID</strong><br>
+                        <input name = "id" type = "text" autofocus size="10" maxlength="20" required class="textInput">
                     </label>
-                    <label>Password: 
-                        <input name = "pwd" type = "password" required>
-                    </label>
-                    <input type="submit" value="Login">
                 </p>
+                <p>
+                    <label><strong>Password</strong> <br>
+                        <input name = "pwd" type = "password" required class="textInput">
+                    </label>
+                </p>
+                <input id="loginBtn" class="btn"type="submit" value="Login">
             </form>
         </div>
         <footer>
-            CSI-2109, Spring 2023
+            <h6>CSI2109-01, 2023 Spring<br>2022149029 최희찬</h6>
         </footer>
     </body>
 </html>
