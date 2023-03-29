@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="utf-8">
+        <title>Internet Programming Shop</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <header>Internet Programming Shop</header>
+        <p><a href="login.html">Login</a> Signup</p>
+        <form method="POST" action = "login.html">
+            <p>
+                <label>이름: <input name = "id" type = "text" autofocus required autocomplete/></label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>생년월일: <input name="birthday" type="date" required/></label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>이메일 주소: <input name="email" type="email" placeholder = "email" required autocomplete/></label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>전화번호: <input name="tel" type="tel" placeholder = "###-####-####" pattern = \d{3}-\d{4}-\d{4}" required/></label>
+                <label>###-####-####</label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>아이디: <input name="id" type="text" required autocomplete/></label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>비밀번호: <input name="passwd" type="password" required/> </label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <label>비밀번호 확인: <input name="chkpasswd" type="passwd" required/></label>
+                <label>* 필수</label>
+            </p>
+            <p>
+                <input type = "submit" value="회원가입"/>
+                <input type = "submit" formnovalidate value="취소" />
+            </p>
+        </form>
+    </body>
+</html>
