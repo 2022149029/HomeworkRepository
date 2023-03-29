@@ -14,18 +14,25 @@
                 <label class="notice">* 필수</label>
             </p>
             <p>
-                <label>생년월일: <input name="birthday" type="date" required/></label>
+                <label>성별
+                    &nbsp;남:&nbsp;<input name = "sex" type = "radio" value = "male" required>
+                    &nbsp;여:&nbsp;<input name = "sex" type = "radio" value = "female" required>
+                    &nbsp;비공개:&nbsp;<input name = "sex" type = "radio" value="notresponse" required>
+                </label>
             </p>
             <p>
-                <label>이메일 주소: <input name="email" type="email" placeholder = "email" required autocomplete/></label>
+                <label>생년월일: <input name="birthday" type="date" /></label>
             </p>
             <p>
-                <label>전화번호: <input name="tel" type="tel" placeholder = "###-####-####" pattern = \d{3}\-\d{4}\-\d{4}" required/></label>
+                <label>이메일 주소: <input name="email" type="email" placeholder = "email" autocomplete/></label>
+            </p>
+            <p>
+                <label>전화번호: <input name="tel" type="tel" placeholder = "###-####-####" pattern = "\d{3}\-\d{4}\-\d{4}" /></label>
                 <label>###-####-####</label>
             </p>
             <p>
-                <label>아이디: <input name="id" type="text" required autocomplete/></label>
-                <label class="notice">* 필수</label>
+                <label>아이디: <input name="id" type="text" maxlength = "20" size = "20"required autocomplete/></label>
+                <label class="notice">* 필수, 20자 이내</label>
             </p>
             <p>
                 <label>비밀번호: <input name="passwd" type="password" required/> </label>
@@ -36,9 +43,19 @@
                 <label class="notice">* 필수</label>
             </p>
             <p>
+                <label>관심품목:
+                    &nbsp;IT/가전&nbsp; <input name = "liked" type = "checkbox" value = "it">
+                    &nbsp;의류&nbsp; <input name = "liked" type = "checkbox" value = "clothes">
+                    &nbsp;식품&nbsp; <input name = "liked" type = "checkbox" value = "food">
+                </label>
+            </p>
+            <p>
                 <input type = "submit" value="회원가입"/>
                 <input type = "submit" formnovalidate value="취소" />
             </p>
         </form>
+        <footer>
+            CSI-2109, Spring 2023
+        </footer>
     </body>
 </html>
