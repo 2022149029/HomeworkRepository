@@ -1,3 +1,6 @@
+body {
+    font-family: sans-serif;
+}
 .header {
     height:25%;
     width:100%;
@@ -28,6 +31,9 @@
     font-size:15px;
     font-family: 'prompt', sans-serif;
     transition: width 100ms ease-in-out;
+    color:black;
+    text-decoration-line: none;
+    text-decoration-color: none;
 }
 
 .navItem:hover {
@@ -37,7 +43,9 @@
     display:block;
     font-size:15px;
     font-family: 'prompt', sans-serif;
-    text-decoration: none;
+    color:black;
+    text-decoration-line: none;
+    text-decoration-color: none;
 }
 .notice {
     font-size:0.8ex;
