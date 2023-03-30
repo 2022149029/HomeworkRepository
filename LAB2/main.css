@@ -1,6 +1,6 @@
 body {
-    font-family: sans-serif;
-    background-color: darkgray;
+    background-color: lightgrey;
+    font-family:'prompt', sans-serif;
 }
 .header {
     height:25%;
@@ -11,7 +11,9 @@ body {
 
 .header h1 {
     font-family: 'prompt', sans-serif;
-    font-size:3em;
+    text-align: left;
+    font-size:2.5em;
+    font-weight: 700;
 }
 
 .nav {
@@ -30,11 +32,11 @@ body {
     margin-right:1ex;
     text-align: center;
     font-size:15px;
+    font-weight: 400;
     font-family: 'prompt', sans-serif;
     transition: width 100ms ease-in-out;
     color:black;
     text-decoration-line: none;
-    text-decoration-color: none;
 }
 
 .navItem:hover {
@@ -46,10 +48,11 @@ body {
     font-family: 'prompt', sans-serif;
     color:black;
     text-decoration-line: none;
-    text-decoration-color: none;
 }
 .notice {
-    font-size:0.8ex;
+    font-size:1.5ex;
+    font-style: italic;
+    font-weight: 300;
     font-family: 'prompt', sans-serif;
     color: red;
 }
@@ -65,17 +68,23 @@ body {
     padding:2em;
     width:400px;
     border-radius:10px;
-    background-color: #CCCCCC;
+    background-color: #C0C0C0;
+    font-weight:300;
 }
 
 
 
 .textInput {
+    font-family:'prompt', sans-serif;
     border-radius:50px;
     border-color:black;
     border-width: 2px;
-    width: 100%;
+    width: 90%;
+    font-weight:300;
     height:30px;
+    font-size:2ex;
+    padding:0 1em;
+    color: black;
 }
 
 .textInput:focus{
@@ -85,13 +94,47 @@ body {
  
 label strong {
     font-family: 'prompt', sans-serif;
+    font-weight:500;
+    font-size:1em;
+}
+
+.dateInput {
+    border-color:black;
+    border-radius:50px;
+    border-width: 2px;
+    height:30px;
+    font-size:2ex;
+    color: black;
+    font-weight:300;
+    padding:0 1em;
+    font-family:'prompt', sans-serif;
+}
+.dateInput:focus{
+    border-color:orange;
+    border-width: 5px;
+}
+
+.intInput {
+    border-color:black;
+    border-radius:50px;
+    border-width: 2px;
+    height:30px;
+    font-size:2ex;
+    color: black;
+    padding:0 1em;
+    font-family:'prompt', sans-serif;
+}
+.intInput:focus{
+    border-color:orange;
+    border-width: 5px;
 }
 
 .btn {
     border-radius:50px;
-    border-width: 2px;
-    height:30px;
-    width:20%;
+    border: 2px double black;
+    font-weight:600;
+    font-size:1em;
+    padding:0.5em 1em;
 }
 
 #signupBtn {
@@ -106,6 +149,16 @@ label strong {
     float:left;
 }
 
+footer{
+    text-align: center;
+}
+
+footer h6 {
+    font-family:'prompt', sans-serif;
+    font-size: 1ex;
+    font-weight: 200;
+}
+
 #cancelBtn {
     border-color:red;
     color:#CC0000;
@@ -113,6 +166,10 @@ label strong {
 }
 
 @media (max-width:800px) {
+    .header h1 {
+        font-size:1.5em;
+        text-align: center;
+    }
     .nav {
          flex-direction:column;
     }
