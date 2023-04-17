@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- signup.html-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">       
+        <title>Shop</title>
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html"><h1>Internet Programming Shop</h1></a>
+        </header>
+        <div class="nav">
+            <div class="navItem"><a href="login.html" class="navLink">Login</a></div>
+            <div class="navItem">Sign Up</div>
+        </div>
+        <div class="main_content">
+            <div class="signFormDiv">
+                <form method="POST" class="signForm">
+                    <p>
+                        <label><strong>Your name</strong> <br><input class="textInput" name = "id" type = "text" placeholder="Enter your name" autofocus required autocomplete="on"><br></label>
+                        <label class="notice">* required</label>
+                    </p>
+                    <p>
+                        <label><strong>Gender</strong></label>
+                        <label class="notice">&nbsp;* required<br></label>
+                        <input name = "gender" type = "radio" value = "male" checked>&nbsp;Male&nbsp;&nbsp;
+                        <input name = "gender" type = "radio" value = "female" >&nbsp;Female&nbsp;&nbsp;
+                        <input name = "gender" type = "radio" value="notresponse" >&nbsp;No Response
+                    </p>
+                    <p>
+                        <label><strong>Age</strong><br> <input class="intInput" name="age" type="number" step="1" max="100" min="1" value="20"></label>
+                    </p>
+                    <p>
+                        <label><strong>Birth</strong><br> <input class="dateInput" name="birthday" type="date"></label>
+                    </p>
+                    <p>
+                        <label><strong>Email Address</strong> <br><input class="textInput" name="email" type="email" placeholder = "email@example.com" autocomplete="on"></label>
+                    </p>
+                    <p>
+                        <label><strong>Tel</strong> <br><input class="textInput" name="tel" type="tel" placeholder = "###-####-####" pattern = "[0-9]{3}-[0-9]{4}-[0-9]{4}" ></label>
+                    </p>
+                    <p>
+                        <label><strong>ID</strong> <br><input class="textInput" name="id" type="text" maxlength = "20" size = "20" placeholder="Your ID" required autocomplete="on"><br></label>
+                        <label class="notice">* required, within 20 characters</label>
+                    </p>
+                    <p>
+                        <label><strong>Password </strong><br><input class="textInput" name="passwd" type="password" placeholder="Your password" required><br> </label>
+                        <label class="notice">* required</label>
+                    </p>
+                    <p>
+                        <label><strong>Password Check</strong> <br><input class="textInput" name="chkpasswd" type="password" placeholder="Enter your password again" required><br></label>
+                        <label class="notice">* required</label>
+                    </p>
+                    <p>
+                        <label><strong>Your Interests</strong><br></label>
+                        <input name = "liked" type = "checkbox" value = "it">&nbsp;IT Devices&nbsp;&nbsp; 
+                        <input name = "liked" type = "checkbox" value = "clothes">&nbsp;Clothes&nbsp;&nbsp; 
+                        <input name = "liked" type = "checkbox" value = "food">&nbsp;Foods
+                    </p>
+                    <p>
+                        <input id="signupBtn" class="btn" type = "submit" value="Sign Up">
+                        <input id="cancelBtn" class="btn" type = "submit" formnovalidate value="Cancel" >
+                    </p>
+                </form>
+            </div>
+            <footer>
+                <h6>CSI2109-01, 2023 Spring<br>2022149029 Heechan Choi</h6>
+            </footer>
+        </div>
+    </body>
+</html>
