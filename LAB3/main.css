@@ -43,7 +43,7 @@ body {
     flex-direction:row;
     width: 1000px;
     background-color:dimgrey;
-    padding:5px, 0px;
+    padding:5px 0px;
 }
 
 .navItem {
