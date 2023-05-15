@@ -66,16 +66,12 @@
                         const search = document.getElementById('search').value;
                         const category = document.getElementById('category').value;
                         const sort = document.getElementById('sort').value;
-                        console.log(search);
-                        console.log(category);
-                        console.log(sort);
                         fetch("product.json")
                         .then(response => {
                             response = response.json()
                             return response;
                         })
                         .then(data => {
-                            console.log(data);
                             var product = data.products;
                             if (sort != "none") {
                                 if (sort == "By Title") {
@@ -129,16 +125,13 @@
                                 inner += '</div>';
                                 item.innerHTML = inner;
                                 productlist.appendChild(item);
-                                console.log(item.id);
                                 item.addEventListener("click", function(event){
-                                    console.log(this.id);
                                     let description = document.querySelector("#" + this.id + " .product_text");
                                     description.style.display = "block";
                                 })
                             }
                         })
                         .catch(error => {
-                            console.log(error);
                         })
                     }
                 </script>
