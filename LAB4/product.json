@@ -1,84 +1,214 @@
 {
     "products": [
         {
-            "ID": 1,
             "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "NAME": "C++ Primer (5th Edition)",
+            "AUTHOR": "Stanley Lippman",
+            "IMAGE": "book1.jpg",
+            "PRICE": 29.68
         },
         {
-            "ID": 2,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "HTML/CSS",
+            "NAME": "Responsive Web Design with HTML5 and CSS",
+            "AUTHOR": "Ben Frain",
+            "IMAGE": "book24.jpg",
+            "PRICE": 22.39
         },
         {
-            "ID": 3,
             "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "NAME": "Effective Modern C++",
+            "AUTHOR": "Scott Meyers",
+            "IMAGE": "book3.jpg",
+            "PRICE": 33.95
         },
         {
-            "ID": 4,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "Java",
+            "NAME": "Java: The Complete Reference, Twelfth Edition",
+            "AUTHOR": "Herbert Schildt",
+            "IMAGE": "book5.jpg",
+            "PRICE": 37.05
         },
         {
-            "ID": 5,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "Python",
+            "NAME": "Python Crash Course, 3rd Edition",
+            "AUTHOR": "Eric Matthes",
+            "IMAGE": "book6.jpg",
+            "PRICE": 30.61
         },
         {
-            "ID": 6,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "JS",
+            "NAME": "JavaScript All-in-One For Dummies",
+            "AUTHOR": "Chris Minnick",
+            "IMAGE": "book29.jpg",
+            "PRICE": 39.99
         },
         {
-            "ID": 7,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "Python",
+            "NAME": "Python Programming for Beginners",
+            "AUTHOR": "Philip Robbins",
+            "IMAGE": "book7.jpg",
+            "PRICE": 26.06
         },
         {
-            "ID": 8,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "HTML/CSS",
+            "NAME": "HTML and CSS: Design and Build Websites",
+            "AUTHOR": "Jon Duckett",
+            "IMAGE": "book8.jpg",
+            "PRICE": 12.96
         },
         {
-            "ID": 9,
-            "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "CATEGORY": "JS",
+            "NAME": "JavaScript: The Definitive Guide",
+            "AUTHOR": "David Flanagan",
+            "IMAGE": "book9.jpg",
+            "PRICE": 35.44
         },
         {
-            "ID": 10,
+            "CATEGORY": "JS",
+            "NAME": "JavaScript from Beginner to Professional",
+            "AUTHOR": "Laurence Lars Svekis , Maaike van Putten , et al.",
+            "IMAGE": "book10.jpg",
+            "PRICE": 18.49
+        },
+        {
             "CATEGORY": "C++",
-            "NAME": "Programming",
-            "IMAGE": "book.png",
-            "PRICE": 10.00,
-            "DESCRIPTION": "testing"
+            "NAME": "The C++ Programming Language",
+            "AUTHOR": "Bjarne Stroustrup",
+            "IMAGE": "book11.jpg",
+            "PRICE": 71.49
+        },
+        {
+            "CATEGORY": "HTML/CSS",
+            "NAME": "Head First HTML and CSS",
+            "AUTHOR": "Elisabeth Robson and Eric Freeman",
+            "IMAGE": "book25.jpg",
+            "PRICE": 42.62
+        },
+        {
+            "CATEGORY": "C++",
+            "NAME": "Starting Out with C++ from Control Structures to Objects",
+            "AUTHOR": "Tony Gaddis ",
+            "IMAGE": "book12.jpg",
+            "PRICE": 20.00
+        },
+        {
+            "CATEGORY": "JS",
+            "NAME": "JavaScript: The Comprehensive Guide to Learning Professional JavaScript Programming",
+            "AUTHOR": "Philip Ackermann ",
+            "IMAGE": "book28.jpg",
+            "PRICE": 47.38
+        },
+        {
+            "CATEGORY": "C++",
+            "NAME": "C++ Software Design: Design Principles and Patterns for High-Quality Software",
+            "AUTHOR": "Klaus Iglberger",
+            "IMAGE": "book13.jpg",
+            "PRICE": 51.99
+        },
+        {
+            "CATEGORY": "Java",
+            "NAME": "Head First Java: A Brain-Friendly Guide",
+            "AUTHOR": "Kathy Sierra, Bert Bates, et al.",
+            "IMAGE": "book14.jpg",
+            "PRICE": 40.83
+        },
+        {
+            "CATEGORY": "HTML/CSS",
+            "NAME": "HTML and CSS QuickStart Guide",
+            "AUTHOR": "David DuRocher",
+            "IMAGE": "book23.jpg",
+            "PRICE": 27.14
+        },
+        {
+            "CATEGORY": "Java",
+            "NAME": "Java All-in-One For Dummies",
+            "AUTHOR": "Doug Lowe",
+            "IMAGE": "book15.jpg",
+            "PRICE": 27.00
+        },
+        {
+            "CATEGORY": "Java",
+            "NAME": "Core Java: Fundamentals, Volume 1",
+            "AUTHOR": "Cay Horstmann",
+            "IMAGE": "book16.jpg",
+            "PRICE": 59.99
+        },
+        {
+            "CATEGORY": "Java",
+            "NAME": "Learning Java: An Introduction to Real-World Programming with Java",
+            "AUTHOR": "Marc Loy , Patrick Niemeyer, et al.",
+            "IMAGE": "book17.jpg",
+            "PRICE": 36.57
+        },
+        {
+            "CATEGORY": "Python",
+            "NAME": "Python for Data Analysis: Data Wrangling with pandas, NumPy, and Jupyter",
+            "AUTHOR": "Wes McKinney",
+            "IMAGE": "book18.jpg",
+            "PRICE": 36.17
+        },
+        {
+            "CATEGORY": "Python",
+            "NAME": "Learning Python, 5th Edition",
+            "AUTHOR": "Mark Lutz",
+            "IMAGE": "book19.jpg",
+            "PRICE": 57.35
+        },
+        {
+            "CATEGORY": "Python",
+            "NAME": "Fluent Python: Clear, Concise, and Effective Programming",
+            "AUTHOR": "Luciano Ramalho",
+            "IMAGE": "book20.jpg",
+            "PRICE": 48.44
+        },
+        {
+            "CATEGORY": "Python",
+            "NAME": "Python 3: The Comprehensive Guide to Hands-On Python Programming",
+            "AUTHOR": "Johannes Ernesti and Peter Kaiser",
+            "IMAGE": "book21.jpg",
+            "PRICE": 59.95
+        },
+        {
+            "CATEGORY": "HTML/CSS",
+            "NAME": "HTML and CSS: The Comprehensive Guide",
+            "AUTHOR": "Jürgen Wolf",
+            "IMAGE": "book22.jpg",
+            "PRICE": 59.95
+        },
+        {
+            "CATEGORY": "Java",
+            "NAME": "Effective Java",
+            "AUTHOR": "Joshua Bloch",
+            "IMAGE": "book4.jpg",
+            "PRICE": 49.49
+        },
+        {
+            "CATEGORY": "HTML/CSS",
+            "NAME": "HTML5 and CSS3 All-in-One For Dummies",
+            "AUTHOR": "Andy Harris",
+            "IMAGE": "book26.jpg",
+            "PRICE": 39.99
+        },
+        {
+            "CATEGORY": "JS",
+            "NAME": "Eloquent JavaScript, 3rd Edition",
+            "AUTHOR": "Marijn Haverbeke",
+            "IMAGE": "book27.jpg",
+            "PRICE": 23.99
+        },
+        {
+            "CATEGORY": "C++",
+            "NAME": "Tour of C++, A (C++ In-Depth Series)",
+            "AUTHOR": "Bjarne Stroustrup",
+            "IMAGE": "book2.jpg",
+            "PRICE": 24.99
+        },
+        {
+            "CATEGORY": "JS",
+            "NAME": "JavaScript and jQuery: Interactive Front-End Web Development",
+            "AUTHOR": "Jon Duckett",
+            "IMAGE": "book30.jpg",
+            "PRICE": 32.80
         }
     ]
 }

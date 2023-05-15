@@ -18,118 +18,134 @@
         </div>
         <div class="main_content">
             <div class="filter_content">
-                testing
+                <p>
+                    <label>Search:
+                        <input id="search" name = "search" type="search" placeholder="Search">
+                    </label>
+                </p>
+                <p>
+                    <label>Select Category:
+                        <select id="category" name = "category">
+                            <option selected>All</option>
+                            <option>C++</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>HTML/CSS</option>
+                            <option>JS</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>Choose a sort:
+                        <select id="sort" name = "sort">
+                            <option selected>none</option>
+                            <option>By Title</option>
+                            <option>By Price</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <button id="filterLoad" onclick="filterLoad()">Filter</button>
+                </p>
             </div>
             <div class="products_content">
-                <!--
-                <div class="product">
-                    <div class="imglist">
-                        <div class="subimg"> 
-                            <img src="book.png" alt="Book icon"> 
-                        </div>
-                        <div class="img"> 
-                            <img src="opbook.jpg" alt="Operating System Book"> 
-                            <p>Operating System Concepts</p>
-                        </div>
-                    </div>
-                    <div class="product_text">
-                        <ul>
-                            <li>Operating System Concepts</li>
-                            <li>tenth edition</li>
-                            <li>103.75$</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="imglist">
-                        <div class="subimg"> 
-                            <img src="book.png" alt="Book icon"> 
-                        </div>
-                        <div class="img"> 
-                            <img src="cvbook.jpeg" alt="Computer Vision Book"> 
-                            <p>Computer Vision</p>
-                        </div>
-                    </div>
-                    <div class="product_text">
-                        <ul>
-                            <li>Computer Vision:<br>Algorithms and Applications</li>
-                            <li>second edition</li>
-                            <li>99.99$</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="imglist">
-                        <div class="subimg"> 
-                            <img src="book.png" alt="Book icon"> 
-                        </div>
-                        <div class="img"> 
-                            <img src="probbook.jpg" alt="Probability & Statistics Book"> 
-                            <p>Probability &amp; Statistics</p>
-                        </div>
-                    </div>
-                    <div class="product_text">
-                        <ul>
-                            <li>Probability &amp; Statistics<br>for Engineeers & Scientists</li>
-                            <li>ninth edition</li>
-                            <li>64.99$</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="imglist">
-                        <div class="subimg"> 
-                            <img src="book.png" alt="Book icon"> 
-                        </div>
-                        <div class="img"> 
-                            <img src="distbook.jpg" alt="Discrete and Combinational mathmetics Book"> 
-                            <p>Discrete and Combinational Mathmetics</p>
-                        </div>
-                    </div>
-                    <div class="product_text">
-                        <ul>
-                            <li>Discrete and Combinational Mathmetics</li>
-                            <li>fifth edition</li>
-                            <li>30.00$</li>
-                        </ul>
-                    </div>
-                </div>
-                --->
                 <script>
-                    fetch("product.json")
-                    .then(response => {
-                        response = response.json()
-                    })
-                    .then(data => {
-                        console.log(data);
-                        var product = data.products;
-                        var inner = "";
-                        for (let i = 0; i < product.length; i++) {
-                            inner += '<div class="product">';
-                            inner += '<div class="imglist">';
-                            inner += '<div class="subimg">';
-                            inner += '<img src="' + "book.png" + '" alt="Category Image">';
-                            inner += '</div>';
-                            inner += '<div class="img">';
-                            inner += '<img src="' + product[i].IMAGE + '" alt="' + product[i].IMAGE + '>';
-                            inner += '<p>' + product[i].NAME + '</p>';
-                            inner += '</div>';
-                            inner += '</div>';
-                            inner += '<div class="product_text">';
-                            inner += '<ul>';
-                            inner += '<li>' + product[i].NAME + '<li>';
-                            inner += '<li>' + product[i].PRICE + '$</li>';
-                            inner += '</ul>';
-                            inner += '</div>';
-                            inner += '</div>';
+                    var count = 0;
+                    var productlist = document.getElementsByClassName('products_content')[0];
+                    document.addEventListener('DOMContentLoaded', load);
+                    window.onscroll = () => {
+                        if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                            load();
                         }
-                        document.getElementsByClassName('products_content').innerHTML = inner;
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
+                    };
+                    function filterLoad() {
+                        productlist.innerHTML = "";
+                        load();
+                    }
+                    function load() {
+                        const search = document.getElementById('search').value;
+                        const category = document.getElementById('category').value;
+                        const sort = document.getElementById('sort').value;
+                        console.log(search);
+                        console.log(category);
+                        console.log(sort);
+                        fetch("product.json")
+                        .then(response => {
+                            response = response.json()
+                            return response;
+                        })
+                        .then(data => {
+                            console.log(data);
+                            var product = data.products;
+                            if (sort != "none") {
+                                if (sort == "By Title") {
+                                    product.sort(function (a, b) {
+                                        if (a.NAME < b.NAME) return -1;
+                                        else return 1;
+                                    });        
+                                }
+                                else if (sort == "By Price") {
+                                    product.sort(function(a, b) {
+                                        if (a.PRICE < b.PRICE) return -1;
+                                        else return 1;
+                                    })
+                                }
+                            }
+                            for (let i = 0; i < product.length; i++) {
+                                if (search != "" && product[i].NAME.toLowerCase().indexOf(search.toLowerCase()) == -1) continue;
+                                if (category != "All" && category != product[i].CATEGORY) continue;
+                                count++;
+                                var item = document.createElement('div');
+                                item.className = "product";
+                                item.id = "item" + count;
+                                var inner = "";
+                                inner += '<div class="imglist">';
+                                inner += '<div class="subimg">';
+                                if (product[i].CATEGORY == "C++") {
+                                    inner += '<img src="cpp.jpg" alt="c++">';
+                                } else if (product[i].CATEGORY == "Java") {
+                                    inner += '<img src="java.jpg" alt="java">';
+                                } else if (product[i].CATEGORY == "Python") {
+                                    inner += '<img src="python.jpg" alt="java">';
+                                } else if (product[i].CATEGORY == "HTML/CSS") {
+                                    inner += '<img src="html.jpg" alt="java">';
+                                } else if (product[i].CATEGORY == "JS") {
+                                    inner += '<img src="javascript.jpg" alt="java">';
+                                } else {
+                                    inner += '<img src="book.png" alt="book">';
+                                }
+                                inner += '</div>';
+                                inner += '<div class="img">';
+                                inner += '<img src="' + product[i].IMAGE + '" alt="' + product[i].IMAGE + '">';
+                                inner += '<div></div>';
+                                inner += '</div>';
+                                inner += '</div>';
+                                inner += '<div class="product_text">';
+                                inner += '<ul>';
+                                inner += '<li>' + product[i].NAME + '</li>';
+                                inner += '<li> By ' + product[i].AUTHOR + '</li>';
+                                inner += '<li>$ ' + product[i].PRICE + '</li>';
+                                inner += '</ul>';
+                                inner += '</div>';
+                                item.innerHTML = inner;
+                                productlist.appendChild(item);
+                                console.log(item.id);
+                                item.addEventListener("click", function(event){
+                                    console.log(this.id);
+                                    let description = document.querySelector("#" + this.id + " .product_text");
+                                    description.style.display = "block";
+                                })
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        })
+                    }
                 </script>
             </div>
         </div>
+        <footer>
+            <h6>CSI2109-01, 2023 Spring<br>2022149029 Heechan Choi</h6>
+        </footer>
     </body>
 </html>
