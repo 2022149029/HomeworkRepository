@@ -1,0 +1,135 @@
+<!--index.html-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Shop</title>
+    </head>
+    <body>
+        <header class="header movingheader">
+            <h1><a href="index.html">Internet Programming Shop</a></h1>
+        </header>
+        <div class="nav">
+            <div class="navItem"><a href="login.html" class="navLink">Login</a></div>
+            <div class="navItem"><a href="signup.html" class="navLink">Sign Up</a></div>
+        </div>
+        <div class="main_content">
+            <div class="filter_content">
+                testing
+            </div>
+            <div class="products_content">
+                <!--
+                <div class="product">
+                    <div class="imglist">
+                        <div class="subimg"> 
+                            <img src="book.png" alt="Book icon"> 
+                        </div>
+                        <div class="img"> 
+                            <img src="opbook.jpg" alt="Operating System Book"> 
+                            <p>Operating System Concepts</p>
+                        </div>
+                    </div>
+                    <div class="product_text">
+                        <ul>
+                            <li>Operating System Concepts</li>
+                            <li>tenth edition</li>
+                            <li>103.75$</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="imglist">
+                        <div class="subimg"> 
+                            <img src="book.png" alt="Book icon"> 
+                        </div>
+                        <div class="img"> 
+                            <img src="cvbook.jpeg" alt="Computer Vision Book"> 
+                            <p>Computer Vision</p>
+                        </div>
+                    </div>
+                    <div class="product_text">
+                        <ul>
+                            <li>Computer Vision:<br>Algorithms and Applications</li>
+                            <li>second edition</li>
+                            <li>99.99$</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="imglist">
+                        <div class="subimg"> 
+                            <img src="book.png" alt="Book icon"> 
+                        </div>
+                        <div class="img"> 
+                            <img src="probbook.jpg" alt="Probability & Statistics Book"> 
+                            <p>Probability &amp; Statistics</p>
+                        </div>
+                    </div>
+                    <div class="product_text">
+                        <ul>
+                            <li>Probability &amp; Statistics<br>for Engineeers & Scientists</li>
+                            <li>ninth edition</li>
+                            <li>64.99$</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="imglist">
+                        <div class="subimg"> 
+                            <img src="book.png" alt="Book icon"> 
+                        </div>
+                        <div class="img"> 
+                            <img src="distbook.jpg" alt="Discrete and Combinational mathmetics Book"> 
+                            <p>Discrete and Combinational Mathmetics</p>
+                        </div>
+                    </div>
+                    <div class="product_text">
+                        <ul>
+                            <li>Discrete and Combinational Mathmetics</li>
+                            <li>fifth edition</li>
+                            <li>30.00$</li>
+                        </ul>
+                    </div>
+                </div>
+                --->
+                <script>
+                    fetch("product.json")
+                    .then(response => {
+                        response = response.json()
+                    })
+                    .then(data => {
+                        console.log(data);
+                        var product = data.products;
+                        var inner = "";
+                        for (let i = 0; i < product.length; i++) {
+                            inner += '<div class="product">';
+                            inner += '<div class="imglist">';
+                            inner += '<div class="subimg">';
+                            inner += '<img src="' + "book.png" + '" alt="Category Image">';
+                            inner += '</div>';
+                            inner += '<div class="img">';
+                            inner += '<img src="' + product[i].IMAGE + '" alt="' + product[i].IMAGE + '>';
+                            inner += '<p>' + product[i].NAME + '</p>';
+                            inner += '</div>';
+                            inner += '</div>';
+                            inner += '<div class="product_text">';
+                            inner += '<ul>';
+                            inner += '<li>' + product[i].NAME + '<li>';
+                            inner += '<li>' + product[i].PRICE + '$</li>';
+                            inner += '</ul>';
+                            inner += '</div>';
+                            inner += '</div>';
+                        }
+                        document.getElementsByClassName('products_content').innerHTML = inner;
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
